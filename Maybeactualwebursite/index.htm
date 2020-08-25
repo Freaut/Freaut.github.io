@@ -1,0 +1,216 @@
+<html>
+
+<head>
+
+    <title>Freaut.org</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="Bobbyhedd.png" /> <!--Changes top of page thingy icon-->
+
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+
+</head>
+
+<style>
+
+    /*Margin clears an area around an element (outside the border), 
+        but Padding clears an area around the content (inside the border) of an element*/
+
+    body {
+
+        background-image: url(bg.png); /*The background image*/
+        background-repeat: no-repeat; /*Makes sure the background dosent repeat aka creaing like 10 of the same images but small*/
+        background-size: 100% 100%; /*Makes sure the image covers the entire screen*/
+        overflow: hidden; /*Removes the scroll bar thingy*/
+
+    }
+
+    /*The side navigation menu*/
+    .sidenav {
+
+        height: 100%; /* 100% Full Height*/
+        width: 0; /*The width, this changes with JavaScript*/
+        position: fixed; /*To make it stay in place*/
+        z-index: 1; /*To make it stay on top*/
+        top: 0; /*Also to make it stay on top*/
+        left: 0; 
+        background-color: #111; /*Making the background color black*/
+        overflow-x: hidden; /*This disables the horizontal scroll*/
+        padding-top: 60px; /*Places content 60 pixels from the top*/
+        transition: 0.5s; /*This makes it a 0.5 second transition effect to the slide in thingy*/
+        text-align: center; /*Makes the text appear in the center of the screen*/
+
+    }
+
+    /*The navigation menu links*/
+    .sidenav a {
+
+        padding: 8px 8px 8px 32px; /*Adds padding*/
+        text-decoration: none; /*Makes sure there is no text decoration*/
+        font-size: 25px; /*Pretty self explainatory, just the font size of the text*/
+        color: #818181; /*The color*/
+        display: block; 
+        transition: 0.3s; /*Adds a 0.3s transition*/
+
+    }
+
+    /*Changes color of the navigation links when hovering over them*/
+    .sidenav a:hover {
+
+        color: #f1f1f1; /*Changes color when hovering*/
+
+    }
+
+    /*Position and style the close button in the top right corner*/
+    .sidenav .closebtn {
+
+        position: absolute; /*Sets the position to "Absolute"*/
+        top: 0; /*Makes sure it stays at the top*/
+        right: 25px; /*Pushes it 25 pixels from the right side*/
+        font-size: 36px; /*Just changes the font size*/
+        margin-left: 50px; /*Adds a 50 pixel left margin*/
+
+    }
+
+
+    /*Changes style of the sidenav on smaller screens with less than 450 pixels height*/
+    @media screen and (max-height: 450px) {
+
+        .sidenav {padding-top: 15px;} /*Pretty self explainatory*/
+        .sidenav a {font-size: 18px;} /*Pretty self explainatory*/
+
+    }
+
+    /*The title text thingy*/
+    .kindatitletext {
+
+        position: center; /*Changes text position to relative (meaning u can center it easily basically)*/
+        margin-top: -75px; /*Pushes the text -75px from the top*/
+        text-align: center; /*Makes sure the text is aligned in the center*/
+        font-size: 28px; /*Pretty self explainatory, but changes the text font*/
+        color: dodgerblue; /*Changes the text color*/
+
+    }
+
+
+    /*The tab bar*/
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        margin-left: 50px;
+        width: 16%;
+    }
+
+    /*Länkarna*/
+    li {
+        float: left;
+    }
+
+    /*Länkarna*/
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /*Länkarna on hover*/
+            li a:hover {
+                background-color: #111;
+            }
+
+
+
+
+
+</style>
+
+<body onload="startTime()">
+
+    <div id="txt" style="color:dodgerblue;font-size:20px;position:absolute;left:50%;top:92%;transform:translate(-50%, 95%)"></div>
+
+
+
+    <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="about/about.htm">About</a>
+        <a href="https://youtube.com/Freaut">Youtube</a>
+        <a href="https://discord.gg/7PT6Cvj">Discord</a>
+        <a href="b/bobby.htm">Epic Raccoon Collection</a>
+
+    </div>
+
+
+    <!--CAN USE any element to open the sidenav (MIGHT CHANGE LATER)-->
+    <span style="font-size:25px;cursor:pointer;color:dodgerblue;position:absolute;top:20px;left:25px;" onclick="openNav()">
+        <!--The double right arrows icon thingy-->
+        <i class="fa fa-angle-double-right"></i>
+
+    </span>
+
+
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                    </li>
+                    <li><a class="active" href="tab1/tab1.htm">Tab1</a></li>
+                    <li><a href="#">Tab2</a></li>
+                    <li><a href="baited/jebaited.htm">Tab3</a></li>
+
+</div>
+
+
+
+            <div class="kindatitletext">
+
+                <h3>Freaut.org</h3>
+
+            </div>
+
+
+            <!--Javascript to open and close the tab in the navigation tab-->
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "21%";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+
+
+
+
+
+</body>
+
+</html>
